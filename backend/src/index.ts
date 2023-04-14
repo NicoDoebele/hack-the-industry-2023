@@ -38,6 +38,13 @@ app.get("/avgcableinstalltime", (req, res) => {
     })
 })
 
+app.get("/avgtasktimeperproject", (req, res) => {
+    db.all("SELECT project_id, AVG(task_time) FROM (SELECT project_id, ((JULIANDAY(end_timestamp) - JULIANDAY(start_timestamp)) * 86400) as task_time FROM task) GROUP BY project_id;", (err, rows) => {
+        if (err) console.log(err);
+        res.send(rows);
+    })
+})
+
 app.listen(3001, () => {
     console.log("server is running.")
 })
