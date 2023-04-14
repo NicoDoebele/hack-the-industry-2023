@@ -31,6 +31,13 @@ app.get("/secondstocompletetasks", (req, res) => {
     })
 })
 
+app.get("/avgcableinstalltime", (req, res) => {
+    db.all("SELECT C.cable_id, AVG((JULIANDAY(end_timestamp) - JULIANDAY(start_timestamp)) * 86400) as avg_installation_time FROM task T, connection C WHERE T.connection_id = C.id GROUP BY C.cable_id;", (err, rows) => {
+        if (err) console.log(err);
+        res.send(rows);
+    })
+})
+
 app.listen(3001, () => {
     console.log("server is running.")
 })
