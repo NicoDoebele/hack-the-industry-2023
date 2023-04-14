@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/express": "^4.17.17"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  }
+}
