@@ -9,14 +9,17 @@ SELECT
   type,
   AVG(strftime('%s', end_timestamp) - strftime('%s', start_timestamp)) AS avg_duration_sec,
   count(type)
+  project_id
 FROM
   task
 WHERE
   done = 1
 GROUP BY
-  type
+  type,
+  project_id
+
 ORDER BY
-  avg_duration_sec DESC`;
+project_id`;
 
 const sql2 = `SELECT
 type,
