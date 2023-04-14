@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@700&display=swap');
+
+*{
+    font-family: 'Life Savers';
+}
+
+body{
+    background-image: url("./assets/backgroundImage.jpg");
+    background-repeat: none;
+    background-size: cover;
+}

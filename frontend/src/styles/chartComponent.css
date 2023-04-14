@@ -1,0 +1,10 @@
+.chartComponent{
+    width: 500px;
+    height: 300px;
+    border: 1.5px solid grey;
+    border-radius: 2rem;
+    background-color: rgba(255,255,255,0.7);
+    text-align: center;
+    align-items: center;
+    margin: 50px;
+}
