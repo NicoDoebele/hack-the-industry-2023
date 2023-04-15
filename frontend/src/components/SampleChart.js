@@ -8,7 +8,7 @@ export default function SecondsToCompleteComponent(){
 
     useEffect( () => {
         async function fetchData(){
-            const data = await fetch('http://localhost:3001/secondstocompletetasks');
+            const data = await fetch('http://localhost:3001/secondstocompletetasks').then(res => res.json());
             setData(data);
         }
         fetchData();
