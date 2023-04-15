@@ -22,7 +22,6 @@ export default function FooterComponent(){
                 <ul className='ul'>
                      <p>Cem Bertram</p>
                 </ul>
-                
             </div>
           </Nav>
       </Container>
