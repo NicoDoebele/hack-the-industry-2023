@@ -17,8 +17,7 @@
     transition: width 0.5s ease-in-out;
   }
   .chartComponent:hover{
-    width: 450px;
-    
+    width: 500px;
   }  
 
   @media only screen and (max-width: 1600px) {
