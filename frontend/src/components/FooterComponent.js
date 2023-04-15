@@ -1,14 +1,16 @@
 import './../styles/footer.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 export default function FooterComponent(){
     return(
-       <div className="footer">
-
-            <div className="event">
-                <h3>Hackathon SS 2023</h3>
-            </div>
-
-            <div className="names">
+       <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand className='logo' href="#home">Hackathon SS 2023</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Nav className="justify-content-end">
+              <div className="names">
                 <h4>Members:</h4>
                 <ul className='ul'>
                     <p>Marios Tzialidis</p>
@@ -23,7 +25,11 @@ export default function FooterComponent(){
                 </ul>
                 
             </div>
+          </Nav>
+      </Container>
+    </Navbar>
+     
+ 
 
-       </div>
     );
 }

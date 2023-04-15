@@ -6,6 +6,7 @@ import SecondsToCompleteComponent from './../components/SecondsToCompleteCompone
 import SampleChart from './../components/SampleChart';
 import ChartBigComponent from './../components/ChartBigComponent';
 import avgcableinstalltime from '../components/AvgCableInstallTime';
+import Container from 'react-bootstrap/esm/Container';
 
 export default function homeRoute(){
     return(
@@ -30,8 +31,9 @@ export default function homeRoute(){
                 <ChartBigComponent title={"Big Real Data 1"} component={avgcableinstalltime} />
 
             </div>
-
+            
             <FooterComponent />
       </div>
+
     );
 }
