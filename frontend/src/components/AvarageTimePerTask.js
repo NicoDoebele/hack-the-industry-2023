@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { CChart } from "@coreui/react-chartjs";
 
-export default function AvgCableInstallTime() {
+export default function AverageTimePerTask() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch("http://localhost:3001/avgcableinstalltime").then(res => res.json());
+      const data = await fetch("http://localhost:3001/avgtasktimeperproject").then(res => res.json());
       setData(data);
     }
     fetchData();
@@ -17,8 +17,8 @@ export default function AvgCableInstallTime() {
 
   if (Array.isArray(data)) {
     data.forEach(datapoint => {
-      labelArray.push(datapoint.cable_id);
-      dataArray.push(datapoint.avg_installation_time);
+      labelArray.push(datapoint.project_id);
+      dataArray.push(datapoint.average_task_time);
     });
   }
 
@@ -29,7 +29,7 @@ export default function AvgCableInstallTime() {
         labels: labelArray,
         datasets: [
           {
-            label: "My Second dataset",
+            label: "My Third dataset",
             backgroundColor: ["#ffd600", "#ff7043", "#8e24aa", "#0097a7", "#43a047"],
             borderColor: "rgba(255, 255, 255, 1)",
             pointBackgroundColor: "rgba(220, 220, 220, 1)",

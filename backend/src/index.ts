@@ -44,19 +44,27 @@ app.get("/avgcableinstalltime", (req, res) => {
 })
 
 app.get("/avgtasktimeperproject", (req, res) => {
-    db.all("SELECT project_id, AVG(task_time) FROM (SELECT project_id, ((JULIANDAY(end_timestamp) - JULIANDAY(start_timestamp)) * 86400) as task_time FROM task) GROUP BY project_id;", (err, rows) => {
+    db.all("SELECT project_id, AVG(task_time) as average_task_time FROM (SELECT project_id, ((JULIANDAY(end_timestamp) - JULIANDAY(start_timestamp)) * 86400) as task_time FROM task) GROUP BY project_id;", (err, rows) => {
         if (err) console.log(err);
         res.send(rows);
     })
 })
-
+/*
 app.get("/avgtasktimeperproject", (req, res) => {
     db.all("SELECT id, project_id, type,done,strftime('%Y-%m-%d', start_timestamp) AS date,strftime('%H:%M:%S', start_timestamp) AS start_time,strftime('%Y-%m-%d', end_timestamp) AS end_date,strftime('%H:%M:%S', end_timestamp) AS end_time,  strftime('%s', end_timestamp) - strftime('%s', start_timestamp) AS time_needed FROM task", (err, rows) => {
         if (err) console.log(err);
         res.send(rows);
     })
 })
+*/
 
+
+app.get("/timeneedeperproject", (req, res) => {
+    db.all("SELECT id, project_id, type,done,strftime('%Y-%m-%d', start_timestamp) AS date,strftime('%H:%M:%S', start_timestamp) AS start_time,strftime('%Y-%m-%d', end_timestamp) AS end_date,strftime('%H:%M:%S', end_timestamp) AS end_time,  sum(strftime('%s', end_timestamp) - strftime('%s', start_timestamp)) AS time_needed FROM task group by project_id", (err, rows) => {
+        if (err) console.log(err);
+        res.send(rows);
+    })
+})
 
 app.listen(3001, () => {
     console.log("server is running.")
