@@ -5,12 +5,9 @@ import ChartComponent from './../components/ChartComponent';
 import SecondsToCompleteComponent from './../components/SecondsToCompleteComponent';
 import ChartBigComponent from './../components/ChartBigComponent';
 import avgcableinstalltime from '../components/AvgCableInstallTime';
-<<<<<<< HEAD
 import Container from 'react-bootstrap/esm/Container';
-=======
-import AvgProjectDuration from '../components/AvgProjectDuration';
 import AverageTimePerTask from '../components/AvarageTimePerTask';
->>>>>>> 4eb7d59ba19e537c8a17c5a114bb3eab12a991be
+import AvgProjectDuration from '../components/AvgProjectDuration';
 
 export default function homeRoute(){
     return(
