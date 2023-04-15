@@ -13,10 +13,8 @@ export default function NavbarComponent() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-           
-              <Link className='navLink' to="/">Home</Link>
-              <Link className='navLink' to="/projects">Projects</Link>
-            
+              <Nav.Link className='navLink' href="/">Home</Nav.Link>
+              <Nav.Link className='navLink' href="/projects">Projects</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
