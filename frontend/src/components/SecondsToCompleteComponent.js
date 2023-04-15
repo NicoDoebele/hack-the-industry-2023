@@ -31,7 +31,7 @@ export default function SecondsToCompleteComponent(){
                 labels: labelArray,
                 datasets: [
                 {
-                    label: "My First dataset",
+                    label: "Seconds To Complete",
                     backgroundColor: "rgba(220, 220, 220, 0.2)",
                     borderColor: "rgba(0, 230, 77, 1)",
                     pointBackgroundColor: "rgba(220, 220, 220, 1)",

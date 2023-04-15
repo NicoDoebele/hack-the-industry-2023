@@ -46,7 +46,7 @@ export default function AvgProjectDuration(){
                 labels: labelArray,
                 datasets: [
                 {
-                    label: "My Second dataset",
+                    label: "Avarage Project Duration",
                     backgroundColor: ["#ffd600", "#ff7043", "#8e24aa", "#0097a7", "#43a047"],
                     borderColor: "rgba(255, 255, 255, 1)",
                     pointBackgroundColor: "rgba(220, 220, 220, 1)",

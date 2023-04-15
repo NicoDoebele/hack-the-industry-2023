@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function FooterComponent(){
     return(
-       <Navbar bg="light" expand="lg">
+       <Navbar bg="light">
       <Container>
         <Navbar.Brand className='logo' href="#home">Hackathon SS 2023</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
