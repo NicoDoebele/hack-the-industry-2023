@@ -49,13 +49,14 @@ app.get("/avgtasktimeperproject", (req, res) => {
         res.send(rows);
     })
 })
-
+/*
 app.get("/avgtasktimeperproject", (req, res) => {
     db.all("SELECT id, project_id, type,done,strftime('%Y-%m-%d', start_timestamp) AS date,strftime('%H:%M:%S', start_timestamp) AS start_time,strftime('%Y-%m-%d', end_timestamp) AS end_date,strftime('%H:%M:%S', end_timestamp) AS end_time,  strftime('%s', end_timestamp) - strftime('%s', start_timestamp) AS time_needed FROM task", (err, rows) => {
         if (err) console.log(err);
         res.send(rows);
     })
 })
+*/
 
 
 app.get("/timeneedeperproject", (req, res) => {
