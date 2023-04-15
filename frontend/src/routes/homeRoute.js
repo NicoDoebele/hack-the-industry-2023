@@ -6,6 +6,7 @@ import SecondsToCompleteComponent from './../components/SecondsToCompleteCompone
 import SampleChart from './../components/SampleChart';
 import ChartBigComponent from './../components/ChartBigComponent';
 import avgcableinstalltime from '../components/AvgCableInstallTime';
+import AvgProjectDuration from '../components/AvgProjectDuration';
 
 export default function homeRoute(){
     return(
@@ -17,17 +18,17 @@ export default function homeRoute(){
 
                 <div className='chartsDiv'>
 
-                <ChartComponent title={"Real Data"} component={SecondsToCompleteComponent} />
+                <ChartComponent title={"Seconds To Complete"} component={SecondsToCompleteComponent} />
 
                 <ChartComponent title={"Real Data 2"} component={avgcableinstalltime} />
 
-                <ChartComponent title={"Real Data 3"} component={SampleChart} />
+                <ChartComponent title={"Avarage Project Duration"} component={AvgProjectDuration} />
 
                 <ChartComponent title={"Real Data 4"} component={SampleChart} />
 
                 </div>
 
-                <ChartBigComponent title={"Big Real Data 1"} component={avgcableinstalltime} />
+                <ChartBigComponent title={"Avarage Time For Cable Install"} component={avgcableinstalltime} />
 
             </div>
 
