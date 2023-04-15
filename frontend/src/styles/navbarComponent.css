@@ -1,0 +1,12 @@
+.navLink{
+    text-decoration: none;
+
+    color: black;
+}
+.navLink:hover{
+    font-weight: bold;
+    color: blue;
+}
+.logo{
+    font-size: 24px;
+}
