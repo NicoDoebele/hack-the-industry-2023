@@ -4,8 +4,8 @@ import FooterComponent from './../components/FooterComponent';
 import ChartComponent from './../components/ChartComponent';
 import SecondsToCompleteComponent from './../components/SecondsToCompleteComponent';
 import SampleChart from './../components/SampleChart';
-import SampleBigChart from './../components/SampleBigChart';
 import ChartBigComponent from './../components/ChartBigComponent';
+import avgcableinstalltime from '../components/AvgCableInstallTime';
 
 export default function homeRoute(){
     return(
@@ -19,7 +19,7 @@ export default function homeRoute(){
 
                 <ChartComponent title={"Real Data"} component={SecondsToCompleteComponent} />
 
-                <ChartComponent title={"Real Data 2"} component={SampleChart} />
+                <ChartComponent title={"Real Data 2"} component={avgcableinstalltime} />
 
                 <ChartComponent title={"Real Data 3"} component={SampleChart} />
 
@@ -27,7 +27,7 @@ export default function homeRoute(){
 
                 </div>
 
-                <ChartBigComponent title={"Big Real Data 1"} component={SampleBigChart} />
+                <ChartBigComponent title={"Big Real Data 1"} component={avgcableinstalltime} />
 
             </div>
 
