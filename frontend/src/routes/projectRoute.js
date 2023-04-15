@@ -6,8 +6,14 @@ export default function projectRoute(){
         <div className="App">
             <NavbarComponent />
 
+            <div className='page1'>
+
+<div className='chartsDiv'>
 
 
+
+</div>
+</div>
             <FooterComponent />
         </div>
     );
