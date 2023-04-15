@@ -1,6 +1,6 @@
 .chartComponent {
     width: 400px;
-    height: 250px;
+    height: 300px;
     border: 1.5px solid grey;
     border-radius: 2rem;
     background-color: rgba(255, 255, 255, 0.7);
@@ -18,13 +18,13 @@
   @media only screen and (max-width: 1600px) {
     .chartComponent {
       width: 350px;
-      height: 250px;
+      height: 300px;
     }
   }
   @media only screen and (max-width: 1407px) {
     .chartComponent {
       width: 300px;
-      height: 250px;
+      height: 300px;
     }
     .chartComponent {
        
@@ -41,7 +41,7 @@
   @media only screen and (max-width: 576px) {
     .chartComponent {
       width: 250px;
-      height: 150px;
+      height: 200px;
     }
   }
   
@@ -56,7 +56,7 @@
 .chartComponent2{
     width: 35%;
     min-width: 600px;
-    min-height: 600px;
+    min-height: 680px;
     height: 100%;
     border: 1px solid grey;
     border-radius: 2rem;
@@ -75,5 +75,7 @@
 @media only screen and (max-width: 900px) {
     .chartComponent2 {
       margin: auto;
+      min-width: 90%;
+      margin-left: 5%;
     }
   }

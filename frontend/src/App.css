@@ -14,6 +14,7 @@ body {
 }
 
 .chartsDiv {
+  min-height: 725px;
   height: 100%;
   width: 65%;
 
@@ -36,5 +37,10 @@ body {
     }
     .chartsDiv{
         width: 100%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .chartComponent2 {
+      width: 100%;
     }
   }
