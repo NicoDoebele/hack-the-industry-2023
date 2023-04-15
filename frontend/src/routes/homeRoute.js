@@ -25,7 +25,7 @@ export default function homeRoute(){
 
                 <ChartComponent title={"Avarage Project Duration"} component={AvgProjectDuration} />
 
-                <ChartComponent title={"Average Time Per Task"} component={AverageTimePerTask} />
+                <ChartComponent title={"Average Task Time per Project"} component={AverageTimePerTask} />
 
                 </div>
 
