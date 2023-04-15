@@ -26,22 +26,22 @@ export default function SecondsToCompleteComponent(){
 
     return(
         <CChart
-            type="line" 
-            data={{
-                labels: labelArray,
-                datasets: [
-                {
-                    label: "My First dataset",
-                    backgroundColor: "rgba(220, 220, 220, 0.2)",
-                    borderColor: "rgba(0, 230, 77, 1)",
-                    pointBackgroundColor: "rgba(220, 220, 220, 1)",
-                    pointBorderColor: "#fff",
-                    data: dataArray
-                },
-                
-                ],
-            }}
-        />
+  type="line" 
+  data={{
+    labels: labelArray,
+    datasets: [
+      {
+        label: "Seconds To Complete",
+        backgroundColor: "rgba(220, 220, 220, 0.2)",
+        borderColor: "rgba(0, 230, 77, 1)",
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        data: dataArray
+      },
+    ],
+  }}
+/>
+
     );
 }
 

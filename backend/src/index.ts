@@ -5,7 +5,7 @@ import cors from "cors";
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:3000"
+    origin: "*"
 }))
 
 let db = new sqlite3.Database('../data/ukonn-x-ng.db', (err) => {
@@ -61,6 +61,13 @@ app.get("/avgtasktimeperproject", (req, res) => {
 
 app.get("/timeneedeperproject", (req, res) => {
     db.all("SELECT id, project_id, type,done,strftime('%Y-%m-%d', start_timestamp) AS date,strftime('%H:%M:%S', start_timestamp) AS start_time,strftime('%Y-%m-%d', end_timestamp) AS end_date,strftime('%H:%M:%S', end_timestamp) AS end_time,  sum(strftime('%s', end_timestamp) - strftime('%s', start_timestamp)) AS time_needed FROM task group by project_id", (err, rows) => {
+        if (err) console.log(err);
+        res.send(rows);
+    })
+})
+
+app.get("/connectioninfo", (req, res) => {
+    db.all("SELECT connection_id, AVG(seconds_to_connect) as average, MIN(seconds_to_connect) as minimum, MAX(seconds_to_connect) as maximum FROM ( SELECT connection_id, ((JULIANDAY(end_timestamp) - JULIANDAY(start_timestamp)) * 86400) as seconds_to_connect FROM task ) GROUP BY connection_id;", (err, rows) => {
         if (err) console.log(err);
         res.send(rows);
     })

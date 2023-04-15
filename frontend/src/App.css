@@ -8,7 +8,7 @@ body {
   background-image: url("./assets/backgroundImage.jpg");
   background-repeat: none;
   background-size: cover;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   min-height: 100vh;
   position: relative;
 }

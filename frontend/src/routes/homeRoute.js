@@ -5,7 +5,7 @@ import ChartComponent from './../components/ChartComponent';
 import SecondsToCompleteComponent from './../components/SecondsToCompleteComponent';
 import ChartBigComponent from './../components/ChartBigComponent';
 import avgcableinstalltime from '../components/AvgCableInstallTime';
-import Container from 'react-bootstrap/esm/Container';
+import ConnectionInfoComponent from '../components/ConnectionInfoComponent';
 import AverageTimePerTask from '../components/AvarageTimePerTask';
 import AvgProjectDuration from '../components/AvgProjectDuration';
 
@@ -21,11 +21,11 @@ export default function homeRoute(){
 
                 <ChartComponent title={"Seconds To Complete"} component={SecondsToCompleteComponent} />
 
-                <ChartComponent title={"Avarage Cable Install Time"} component={avgcableinstalltime} />
+                <ChartComponent title={"Connection Info"} component={ConnectionInfoComponent} />
 
                 <ChartComponent title={"Avarage Project Duration"} component={AvgProjectDuration} />
 
-                <ChartComponent title={"Average Time Per Task"} component={AverageTimePerTask} />
+                <ChartComponent title={"Average Task Time per Project"} component={AverageTimePerTask} />
 
                 </div>
 
