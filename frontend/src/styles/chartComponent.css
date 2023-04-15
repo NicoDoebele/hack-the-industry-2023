@@ -20,6 +20,12 @@
     scale: 1.2;
     transition: all 1s ease-in-out;
   }  
+  .chartComponent2:hover{
+    scale: 1.1;
+    transition: all 1s ease-in-out;
+    transform: translateX(-50px);
+
+  }
 
   @media only screen and (max-width: 1600px) {
     .chartComponent {
