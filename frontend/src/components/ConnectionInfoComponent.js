@@ -49,7 +49,7 @@ export default function ConnectionInfoComponent() {
             backgroundColor: "#8e24aa",
             data: maximumData,
             stack: "stack1"
-          }
+          },
         ]
       }}
       options={{
