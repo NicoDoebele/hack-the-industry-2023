@@ -8,7 +8,6 @@ export default function FooterComponent(){
        <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand className='logo' href="#home">Hackathon SS 2023</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Nav className="justify-content-end">
               <div className="names">
                 <h4>Members:</h4>
