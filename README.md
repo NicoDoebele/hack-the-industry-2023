@@ -14,17 +14,9 @@ cd hackathon
 
 ## Run Frontend and Backend
 
-Run Backend on Port 3001
+Run Frontend (Port 3000) and Backend (Port 3001)
 ```bash
-cd backend
-npm install
 npm start
 ```
 
-Run Frontend on Port 3000
-```bash
-cd ..
-cd frontend
-npm install
-npm start
-```
+
